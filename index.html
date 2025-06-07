@@ -30,6 +30,7 @@
     
     <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+    <link rel="stylesheet" href="css/custom.css">
 
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon"> <!-- Reemplaza con tu favicon -->
 
@@ -133,6 +134,7 @@
     <!-- <script src="https://www.google.com/recaptcha/api.js?render=TU_SITE_KEY_RECAPTCHA_V3" async defer></script> -->
 </head>
 <body>
+    <a id="top"></a>
     <header id="main-header">
         <div class="container">
             <a href="index.html" class="logo" aria-label="Volver al inicio">
@@ -434,6 +436,18 @@
         </symbol>
     </svg>
 
+    <a href="#top" id="scrollTop" class="scroll-top" aria-label="Volver arriba">&uarr;</a>
+
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+    </script>
     <script src="js/main.min.js" defer></script>
 </body>
 </html>
